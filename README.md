@@ -11,15 +11,9 @@
 Сайт сделан без CSS-фреймворков. JavaScript используется только для открытия
 и закрытия модального окна и для проверки форм.
 
-## Автор
-
-ФИО: укажите свои данные
-
-Группа: укажите свою группу
-
 ## Ссылка на опубликованный проект
 
-GitHub Pages: https://sho6ot.github.io/kr1-html-css-shop/
+GitHub Pages: https://sho6ot.github.io/frontback-practice/
 
 ## Как посмотреть проект
 
@@ -30,7 +24,7 @@ GitHub Pages: https://sho6ot.github.io/kr1-html-css-shop/
 ## Структура проекта
 
 ```
-kr1-html-css-shop/
+frontback-practice/
 ├── index.html      — главная страница
 ├── catalog.html    — каталог с фильтром по категориям
 ├── product.html    — карточка товара
