@@ -3,178 +3,228 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Учебный интернет-магазин</title>
+  <title>Зерно и помол — кофе и оборудование для дома</title>
+  <meta name="description" content="Учебный интернет-магазин свежеобжаренного кофе, кофемолок и аксессуаров для заваривания дома.">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
 </head>
 <body>
-  <header>
-    <div class="site-header">
-      <a class="site-logo" href="index.html">ShopProject</a>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+  <header class="site-header" id="top">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">
+        <svg class="site-header__logo-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <ellipse cx="16" cy="16" rx="11" ry="14" transform="rotate(30 16 16)" fill="currentColor"/>
+          <path d="M10 25c6-4 6-14 12-18" fill="none" stroke="#fffdf9" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        Зерно и помол
+      </a>
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="#popular">Популярные товары</a></li>
-          <li><a href="#advantages">Преимущества</a></li>
-          <li><a href="#contacts">Контакты</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html" aria-current="page">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
+      <a class="site-header__phone" href="tel:+74950000000">+7 (495) 000-00-00</a>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <h1>Учебный интернет-магазин</h1>
-      <p>
-        Это стартовая страница учебного frontend-проекта.
-        В дальнейшем на её основе будет разработан многостраничный сайт
-        интернет-магазина или каталога услуг.
-      </p>
-      <a class="button" href="#popular">Перейти к товарам</a>
+  <main class="page" id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Свежая обжарка каждую неделю</p>
+        <h1 class="hero__title" id="hero-title">Всё для вкусного кофе дома</h1>
+        <p class="hero__text">
+          Зерно от небольших обжарщиков, кофемолки и аксессуары для заваривания.
+          Поможем подобрать помол и способ приготовления под ваш вкус.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="catalog.html">Перейти в каталог</a>
+          <a class="button button--secondary" href="#popular">Популярные товары</a>
+        </div>
+      </div>
+      <img class="hero__image" src="images/hero.svg" alt="" width="480" height="360">
     </section>
 
-    <section class="section" id="advantages">
-      <h2>Преимущества проекта</h2>
-      <ul class="advantages-list">
-        <li>понятная HTML-структура;</li>
-        <li>семантические блоки страницы;</li>
-        <li>подключение внешнего CSS-файла;</li>
-        <li>подготовка к разработке многостраничного сайта.</li>
+    <section class="section" id="advantages" aria-labelledby="advantages-title">
+      <h2 class="section__title" id="advantages-title">Почему выбирают нас</h2>
+      <ul class="advantages">
+        <li class="advantages__item">
+          <h3 class="advantages__title">Свежая обжарка</h3>
+          <p class="advantages__text">Отправляем зерно не позже 7 дней после обжарки — дата указана на пачке.</p>
+        </li>
+        <li class="advantages__item">
+          <h3 class="advantages__title">Помол под ваш способ</h3>
+          <p class="advantages__text">Смелем зерно под турку, пуровер, френч-пресс или эспрессо бесплатно.</p>
+        </li>
+        <li class="advantages__item">
+          <h3 class="advantages__title">Проверенное оборудование</h3>
+          <p class="advantages__text">Продаём только то, чем пользуемся сами, и даём гарантию до 2 лет.</p>
+        </li>
+        <li class="advantages__item">
+          <h3 class="advantages__title">Доставка за 1–2 дня</h3>
+          <p class="advantages__text">Курьер по Москве, пункты выдачи по России или самовывоз из шоурума.</p>
+        </li>
       </ul>
     </section>
 
-    <section class="section" id="popular">
-      <h2>Популярные товары</h2>
-
-      <article class="product-card">
-        <h3>Товар 1</h3>
-        <p>Краткое описание учебного товара.</p>
-        <p>Цена: 1000 руб.</p>
-        <button class="button product-card__button" type="button" data-product="Товар 1">
-          Заказать
-        </button>
-      </article>
-
-      <article class="product-card">
-        <h3>Товар 2</h3>
-        <p>Краткое описание учебного товара.</p>
-        <p>Цена: 1500 руб.</p>
-        <button class="button product-card__button" type="button" data-product="Товар 2">
-          Заказать
-        </button>
-      </article>
-
-      <article class="product-card">
-        <h3>Товар 3</h3>
-        <p>Краткое описание учебного товара.</p>
-        <p>Цена: 2000 руб.</p>
-        <button class="button product-card__button" type="button" data-product="Товар 3">
-          Заказать
-        </button>
-      </article>
+    <section class="section" id="categories" aria-labelledby="categories-title">
+      <div class="section__header">
+        <h2 class="section__title" id="categories-title">Категории</h2>
+        <a class="section__link" href="catalog.html">Весь каталог</a>
+      </div>
+      <ul class="category-list">
+        <li>
+          <a class="category-card" href="catalog.html#beans">
+            <img class="category-card__image" src="images/beans.svg" alt="" width="400" height="300" loading="lazy">
+            <span class="category-card__title">Кофе в зёрнах</span>
+            <span class="category-card__count">3 товара</span>
+          </a>
+        </li>
+        <li>
+          <a class="category-card" href="catalog.html#grinders">
+            <img class="category-card__image" src="images/grinder.svg" alt="" width="400" height="300" loading="lazy">
+            <span class="category-card__title">Кофемолки</span>
+            <span class="category-card__count">2 товара</span>
+          </a>
+        </li>
+        <li>
+          <a class="category-card" href="catalog.html#brewers">
+            <img class="category-card__image" src="images/brewer.svg" alt="" width="400" height="300" loading="lazy">
+            <span class="category-card__title">Заваривание</span>
+            <span class="category-card__count">2 товара</span>
+          </a>
+        </li>
+        <li>
+          <a class="category-card" href="catalog.html#accessories">
+            <img class="category-card__image" src="images/accessory.svg" alt="" width="400" height="300" loading="lazy">
+            <span class="category-card__title">Аксессуары</span>
+            <span class="category-card__count">2 товара</span>
+          </a>
+        </li>
+      </ul>
     </section>
 
-    <aside class="aside-info">
-      <h2>Информация для студентов</h2>
-      <p>
-        На следующих практических занятиях этот проект будет расширяться:
-        появятся формы, модальное окно, дополнительные страницы, Flex/Grid,
-        БЭМ-структура и адаптивная версия сайта.
-      </p>
+    <section class="section" id="popular" aria-labelledby="popular-title">
+      <div class="section__header">
+        <h2 class="section__title" id="popular-title">Популярные товары</h2>
+        <a class="section__link" href="catalog.html">Смотреть все</a>
+      </div>
+      <div class="product-grid">
+        <article class="product-card" data-category="beans">
+          <span class="badge badge--hit product-card__badge">Хит</span>
+          <img class="product-card__image" src="images/beans.svg" alt="" width="400" height="300" loading="lazy">
+          <div class="product-card__body">
+            <p class="product-card__category">Кофе в зёрнах</p>
+            <h3 class="product-card__title">Эфиопия Иргачеффе</h3>
+            <p class="product-card__description">Светлая обжарка, ноты бергамота и жасмина. 250 г.</p>
+            <p class="product-card__price">890 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--small product-card__button" href="product.html">Подробнее</a>
+              <a class="button button--small button--secondary" href="order.html">В заявку</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="grinders">
+          <span class="badge badge--hit product-card__badge">Хит</span>
+          <img class="product-card__image" src="images/grinder.svg" alt="" width="400" height="300" loading="lazy">
+          <div class="product-card__body">
+            <p class="product-card__category">Кофемолки</p>
+            <h3 class="product-card__title">Ручная кофемолка «Жернов»</h3>
+            <p class="product-card__description">Стальные конические жернова, 30 ступеней помола.</p>
+            <p class="product-card__price">3 990 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--small product-card__button" href="product.html">Подробнее</a>
+              <a class="button button--small button--secondary" href="order.html">В заявку</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="brewers">
+          <img class="product-card__image" src="images/brewer.svg" alt="" width="400" height="300" loading="lazy">
+          <div class="product-card__body">
+            <p class="product-card__category">Заваривание</p>
+            <h3 class="product-card__title">Воронка V60, керамика</h3>
+            <p class="product-card__description">Классика пуровера на 1–2 чашки, в комплекте 40 фильтров.</p>
+            <p class="product-card__price">1 590 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--small product-card__button" href="product.html">Подробнее</a>
+              <a class="button button--small button--secondary" href="order.html">В заявку</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="reviews" aria-labelledby="reviews-title">
+      <h2 class="section__title" id="reviews-title">Отзывы покупателей</h2>
+      <div class="reviews">
+        <figure class="review">
+          <p class="review__rating"><span aria-hidden="true">★★★★★</span><span class="visually-hidden">Оценка 5 из 5</span></p>
+          <blockquote class="review__text">
+            <p>Заказал Иргачеффе и воронку — в пачке была карточка с рецептом. Первый пуровер получился с первого раза.</p>
+          </blockquote>
+          <figcaption class="review__author">Алексей, Москва</figcaption>
+        </figure>
+        <figure class="review">
+          <p class="review__rating"><span aria-hidden="true">★★★★★</span><span class="visually-hidden">Оценка 5 из 5</span></p>
+          <blockquote class="review__text">
+            <p>Кофемолка «Жернов» мелет ровно, ручка не люфтит. Помогли по телефону выбрать ступень под турку.</p>
+          </blockquote>
+          <figcaption class="review__author">Марина, Казань</figcaption>
+        </figure>
+        <figure class="review">
+          <p class="review__rating"><span aria-hidden="true">★★★★☆</span><span class="visually-hidden">Оценка 4 из 5</span></p>
+          <blockquote class="review__text">
+            <p>Доставка на следующий день, зерно свежее. Хотелось бы больше пачек по 1 кг.</p>
+          </blockquote>
+          <figcaption class="review__author">Игорь, Санкт-Петербург</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <aside class="promo" aria-labelledby="promo-title">
+      <div>
+        <h2 class="promo__title" id="promo-title">Не знаете, что выбрать?</h2>
+        <p class="promo__text">Оставьте заявку — бариста подберёт зерно и способ заваривания под ваш вкус.</p>
+      </div>
+      <div class="promo__actions">
+        <a class="button button--light" href="order.html">Оставить заявку</a>
+        <a class="button button--ghost" href="contacts.html#faq">Частые вопросы</a>
+      </div>
     </aside>
   </main>
 
-  <footer id="contacts">
-    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
-    <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+  <footer class="site-footer" id="contacts">
+    <div class="site-footer__inner">
+      <div class="site-footer__column">
+        <h2 class="site-footer__title">Зерно и помол</h2>
+        <p class="site-footer__text">Учебный интернет-магазин кофе и оборудования для домашнего заваривания.</p>
+      </div>
+      <nav class="site-footer__column" aria-label="Разделы сайта">
+        <h2 class="site-footer__title">Разделы</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="index.html#advantages">Преимущества</a></li>
+          <li><a class="site-footer__link" href="index.html#popular">Популярные товары</a></li>
+          <li><a class="site-footer__link" href="catalog.html#grinders">Кофемолки</a></li>
+          <li><a class="site-footer__link" href="contacts.html#faq">Вопросы и ответы</a></li>
+        </ul>
+      </nav>
+      <div class="site-footer__column">
+        <h2 class="site-footer__title">Контакты</h2>
+        <address class="site-footer__address">
+          Москва, ул. Учебная, 1<br>
+          <a class="site-footer__link" href="tel:+74950000000">+7 (495) 000-00-00</a><br>
+          <a class="site-footer__link" href="mailto:hello@zerno.example">hello@zerno.example</a>
+        </address>
+      </div>
+    </div>
+    <p class="site-footer__bottom">&copy; 2026 Зерно и помол. Учебный проект по дисциплине «Фронтенд и бэкенд разработка».</p>
   </footer>
 
-  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
-    <h2 id="order-dialog-title">Оформление заявки</h2>
-
-    <form class="order-form" id="order-form" action="#" method="post" novalidate>
-      <input id="selected-product" name="selected-product" type="hidden">
-
-      <div class="form-field">
-        <label for="order-name">Имя</label>
-        <input
-          id="order-name"
-          name="name"
-          type="text"
-          placeholder="Введите ваше имя"
-          minlength="2"
-          autocomplete="given-name"
-          required
-        >
-      </div>
-
-      <div class="form-field">
-        <label for="order-email">E-mail</label>
-        <input
-          id="order-email"
-          name="email"
-          type="email"
-          placeholder="example@mail.ru"
-          autocomplete="email"
-          required
-        >
-      </div>
-
-      <div class="form-field">
-        <label for="order-phone">Телефон</label>
-        <input
-          id="order-phone"
-          name="phone"
-          type="tel"
-          inputmode="tel"
-          placeholder="+7 (900) 000-00-00"
-          pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
-          required
-        >
-        <small>Формат: +7 (900) 000-00-00</small>
-      </div>
-
-      <div class="form-field">
-        <label for="order-date">Дата связи</label>
-        <input id="order-date" name="date" type="date">
-      </div>
-
-      <div class="form-field">
-        <label for="order-topic">Тема заявки</label>
-        <select id="order-topic" name="topic" required>
-          <option value="">Выберите тему</option>
-          <option value="product">Заказ товара</option>
-          <option value="consultation">Консультация</option>
-          <option value="delivery">Доставка</option>
-        </select>
-      </div>
-
-      <div class="form-field">
-        <label for="order-comment">Комментарий</label>
-        <textarea
-          id="order-comment"
-          name="comment"
-          rows="4"
-          placeholder="Укажите дополнительную информацию"
-        ></textarea>
-      </div>
-
-      <div class="form-field form-field--checkbox">
-        <label>
-          <input id="order-agreement" name="agreement" type="checkbox" required>
-          Я согласен на обработку данных
-        </label>
-      </div>
-
-      <div class="form-actions">
-        <button type="button" id="close-order-dialog">Закрыть</button>
-        <button type="submit">Отправить заявку</button>
-      </div>
-    </form>
-  </dialog>
-
-  <p class="success-message" id="success-message" hidden>
-    Форма успешно отправлена!
-  </p>
+  <a class="to-top" href="#top" aria-label="Наверх">↑</a>
 </body>
 </html>
