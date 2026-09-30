@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты — Зерно и помол</title>
+  <meta name="description" content="Адрес шоурума, телефон, часы работы, форма обратной связи и ответы на частые вопросы магазина «Зерно и помол».">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+  <header class="site-header" id="top">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">
+        <svg class="site-header__logo-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <ellipse cx="16" cy="16" rx="11" ry="14" transform="rotate(30 16 16)" fill="currentColor"/>
+          <path d="M10 25c6-4 6-14 12-18" fill="none" stroke="#fffdf9" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        Зерно и помол
+      </a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="contacts.html" aria-current="page">Контакты</a></li>
+        </ul>
+      </nav>
+      <a class="site-header__phone" href="tel:+74950000000">+7 (495) 000-00-00</a>
+    </div>
+  </header>
+
+  <main class="page" id="main" tabindex="-1">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+        <li class="breadcrumbs__item"><span aria-current="page">Контакты</span></li>
+      </ol>
+    </nav>
+
+    <h1 class="page__title">Контакты</h1>
+    <p class="page__lead">
+      Приходите в шоурум попробовать кофе и подержать кофемолки в руках
+      или напишите нам — ответим в течение рабочего дня.
+    </p>
+
+    <div class="contacts">
+      <section class="contact-card" id="contacts-info" aria-labelledby="contacts-info-title">
+        <h2 class="contact-card__title" id="contacts-info-title">Как связаться</h2>
+        <address class="contact-card__address">
+          Шоурум и пункт самовывоза:<br>
+          Москва, ул. Учебная, 1, 2 этаж
+        </address>
+        <dl class="contact-card__list">
+          <dt class="contact-card__term">Телефон</dt>
+          <dd class="contact-card__value"><a href="tel:+74950000000">+7 (495) 000-00-00</a></dd>
+          <dt class="contact-card__term">E-mail</dt>
+          <dd class="contact-card__value"><a href="mailto:hello@zerno.example">hello@zerno.example</a></dd>
+          <dt class="contact-card__term">Будни</dt>
+          <dd class="contact-card__value">10:00–20:00</dd>
+          <dt class="contact-card__term">Выходные</dt>
+          <dd class="contact-card__value">11:00–18:00</dd>
+        </dl>
+      </section>
+
+      <section aria-labelledby="feedback-title">
+        <form class="form" id="feedback-form" action="#" method="post" novalidate data-validate data-success="feedback-success">
+          <h2 class="form__title" id="feedback-title">Напишите нам</h2>
+          <p class="form__note">
+            Хотите оформить покупку? Удобнее через <a href="order.html">форму заявки</a>.
+            Поля со знаком <span class="form__required">*</span> обязательны.
+          </p>
+
+          <div class="form__row">
+            <div class="form__field">
+              <label class="form__label" for="feedback-name">Имя <span class="form__required" aria-hidden="true">*</span></label>
+              <input class="form__input" id="feedback-name" name="name" type="text" minlength="2" autocomplete="name" required>
+            </div>
+
+            <div class="form__field">
+              <label class="form__label" for="feedback-email">E-mail <span class="form__required" aria-hidden="true">*</span></label>
+              <input class="form__input" id="feedback-email" name="email" type="email" autocomplete="email" placeholder="example@mail.ru" required>
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="form__field">
+              <label class="form__label" for="feedback-phone">Телефон</label>
+              <input class="form__input" id="feedback-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel"
+                placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" aria-describedby="feedback-phone-hint">
+              <small class="form__hint" id="feedback-phone-hint">Необязательно. Формат: +7 (900) 000-00-00</small>
+            </div>
+
+            <div class="form__field">
+              <label class="form__label" for="feedback-topic">Тема <span class="form__required" aria-hidden="true">*</span></label>
+              <select class="form__input" id="feedback-topic" name="topic" required>
+                <option value="">Выберите тему</option>
+                <option value="question">Вопрос о товаре</option>
+                <option value="order">Статус заказа</option>
+                <option value="wholesale">Оптовые закупки</option>
+                <option value="other">Другое</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form__field">
+            <label class="form__label" for="feedback-message">Сообщение <span class="form__required" aria-hidden="true">*</span></label>
+            <textarea class="form__input form__input--textarea" id="feedback-message" name="message" rows="5" minlength="10" maxlength="1000" required></textarea>
+          </div>
+
+          <div class="form__field">
+            <label class="form__check">
+              <input class="form__control" id="feedback-agreement" name="agreement" type="checkbox" required>
+              Я согласен на обработку персональных данных <span class="form__required" aria-hidden="true">*</span>
+            </label>
+          </div>
+
+          <div class="form__actions">
+            <button class="button" type="submit">Отправить сообщение</button>
+          </div>
+        </form>
+
+        <p class="notice notice--success" id="feedback-success" role="status" tabindex="-1" hidden>
+          Сообщение отправлено! Ответим на указанный e-mail в течение рабочего дня.
+        </p>
+      </section>
+    </div>
+
+    <section class="section" id="route" aria-labelledby="route-title">
+      <h2 class="section__title" id="route-title">Как добраться</h2>
+      <ol class="section__text">
+        <li>От метро «Учебная» — выход №2, прямо 300 м до бизнес-центра.</li>
+        <li>Вход со двора, 2 этаж, дверь с вывеской «Зерно и помол».</li>
+        <li>Парковка у здания бесплатна первые 30 минут.</li>
+      </ol>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <h2 class="section__title" id="faq-title">Вопросы и ответы</h2>
+      <div class="faq">
+        <details class="faq__item">
+          <summary class="faq__question">Сколько хранится свежеобжаренное зерно?</summary>
+          <p class="faq__answer">В закрытой пачке с клапаном — до 3 месяцев, после вскрытия лучше использовать за 3–4 недели.</p>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question">Можно ли смолоть зерно при заказе?</summary>
+          <p class="faq__answer">Да, бесплатно. Укажите способ заваривания в комментарии к заявке — подберём помол.</p>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question">Как выбрать кофемолку?</summary>
+          <p class="faq__answer">Для одной-двух чашек в день хватит ручной, для эспрессо и большой семьи удобнее электрическая жерновая.</p>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question">Есть ли гарантия на оборудование?</summary>
+          <p class="faq__answer">На кофемолки и весы — от 1 года, на подарочную комплектацию «Жернова» — 2 года.</p>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question">Можно ли вернуть товар?</summary>
+          <p class="faq__answer">Оборудование — в течение 14 дней, если сохранены вид и упаковка. Вскрытое зерно вернуть нельзя.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <div class="site-footer__inner">
+      <div class="site-footer__column">
+        <h2 class="site-footer__title">Зерно и помол</h2>
+        <p class="site-footer__text">Учебный интернет-магазин кофе и оборудования для домашнего заваривания.</p>
+      </div>
+      <nav class="site-footer__column" aria-label="Разделы сайта">
+        <h2 class="site-footer__title">Разделы</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="index.html#advantages">Преимущества</a></li>
+          <li><a class="site-footer__link" href="index.html#popular">Популярные товары</a></li>
+          <li><a class="site-footer__link" href="catalog.html#grinders">Кофемолки</a></li>
+          <li><a class="site-footer__link" href="contacts.html#faq">Вопросы и ответы</a></li>
+        </ul>
+      </nav>
+      <div class="site-footer__column">
+        <h2 class="site-footer__title">Контакты</h2>
+        <address class="site-footer__address">
+          Москва, ул. Учебная, 1<br>
+          <a class="site-footer__link" href="tel:+74950000000">+7 (495) 000-00-00</a><br>
+          <a class="site-footer__link" href="mailto:hello@zerno.example">hello@zerno.example</a>
+        </address>
+      </div>
+    </div>
+    <p class="site-footer__bottom">&copy; 2026 Зерно и помол. Учебный проект по дисциплине «Фронтенд и бэкенд разработка».</p>
+  </footer>
+
+  <a class="to-top" href="#top" aria-label="Наверх">↑</a>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог — Зерно и помол</title>
+  <meta name="description" content="Каталог кофе в зёрнах, кофемолок, воронок и аксессуаров для заваривания кофе дома.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+  <header class="site-header" id="top">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">
+        <svg class="site-header__logo-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <ellipse cx="16" cy="16" rx="11" ry="14" transform="rotate(30 16 16)" fill="currentColor"/>
+          <path d="M10 25c6-4 6-14 12-18" fill="none" stroke="#fffdf9" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        Зерно и помол
+      </a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <a class="site-header__phone" href="tel:+74950000000">+7 (495) 000-00-00</a>
+    </div>
+  </header>
+
+  <main class="page" id="main" tabindex="-1">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+        <li class="breadcrumbs__item"><span aria-current="page">Каталог</span></li>
+      </ol>
+    </nav>
+
+    <section class="catalog" aria-labelledby="catalog-title">
+      <span class="catalog__anchor" id="all"></span>
+      <span class="catalog__anchor" id="beans"></span>
+      <span class="catalog__anchor" id="grinders"></span>
+      <span class="catalog__anchor" id="brewers"></span>
+      <span class="catalog__anchor" id="accessories"></span>
+
+      <h1 class="page__title" id="catalog-title">Каталог</h1>
+      <p class="page__lead">
+        Зерно, кофемолки и всё для заваривания. Выберите категорию —
+        список товаров обновится без перезагрузки страницы.
+      </p>
+
+      <div class="catalog__layout">
+        <aside class="catalog-filter" aria-labelledby="filter-title">
+          <h2 class="catalog-filter__title" id="filter-title">Категории</h2>
+          <ul class="catalog-filter__list">
+            <li class="catalog-filter__item"><a class="catalog-filter__link" href="#all">Все товары <span class="catalog-filter__count">9</span></a></li>
+            <li class="catalog-filter__item"><a class="catalog-filter__link" href="#beans">Кофе в зёрнах <span class="catalog-filter__count">3</span></a></li>
+            <li class="catalog-filter__item"><a class="catalog-filter__link" href="#grinders">Кофемолки <span class="catalog-filter__count">2</span></a></li>
+            <li class="catalog-filter__item"><a class="catalog-filter__link" href="#brewers">Заваривание <span class="catalog-filter__count">2</span></a></li>
+            <li class="catalog-filter__item"><a class="catalog-filter__link" href="#accessories">Аксессуары <span class="catalog-filter__count">2</span></a></li>
+          </ul>
+          <p class="catalog-filter__note">
+            Сомневаетесь с выбором? Загляните в <a href="contacts.html#faq">ответы на вопросы</a>
+            или <a href="order.html">оставьте заявку</a> на консультацию.
+          </p>
+        </aside>
+
+        <div class="product-grid">
+          <article class="product-card" data-category="beans">
+            <span class="badge badge--hit product-card__badge">Хит</span>
+            <img class="product-card__image" src="images/beans.svg" alt="" width="400" height="300" loading="lazy">
+            <div class="product-card__body">
+              <p class="product-card__category">Кофе в зёрнах</p>
+              <h3 class="product-card__title">Эфиопия Иргачеффе</h3>
+              <p class="product-card__description">Светлая обжарка, ноты бергамота и жасмина. 250 г.</p>
+              <p class="product-card__price">890 ₽</p>
+              <div class="product-card__actions">
+                <a class="button button--small product-card__button" href="product.html">Подробнее</a>
+                <a class="button button--small button--secondary" href="order.html">В заявку</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-card--sale" data-category="beans">
+            <span class="badge badge--sale product-card__badge">−13%</span>
+            <img class="product-card__image" src="images/beans.svg" alt="" width="400" height="300" loading="lazy">
+            <div class="product-card__body">
+              <p class="product-card__category">Кофе в зёрнах</p>
+              <h3 class="product-card__title">Колумбия Супремо</h3>
+              <p class="product-card__description">Средняя обжарка: карамель, орех, мягкая кислотность. 250 г.</p>
+              <p class="product-card__price"><del class="product-card__old-price"><span class="visually-hidden">Старая цена:</span> 790 ₽</del> <span class="visually-hidden">Новая цена:</span> 690 ₽</p>
+              <div class="product-card__actions">
+                <a class="button button--small product-card__button" href="product.html">Подробнее</a>
+                <a class="button button--small button--secondary" href="order.html">В заявку</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="beans">
+            <img class="product-card__image" src="images/beans.svg" alt="" width="400" height="300" loading="lazy">
+            <div class="product-card__body">
+              <p class="product-card__category">Кофе в зёрнах</p>
+              <h3 class="product-card__title">Бразилия Сантос</h3>
+              <p class="product-card__description">Тёмная обжарка для эспрессо и турки: шоколад и орех. 1 кг.</p>
+              <p class="product-card__price">2 490 ₽</p>
+              <div class="product-card__actions">
+                <a class="button button--small product-card__button" href="product.html">Подробнее</a>
+                <a class="button button--small button--secondary" href="order.html">В заявку</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="grinders">
+            <span class="badge badge--hit product-card__badge">Хит</span>
+            <img class="product-card__image" src="images/grinder.svg" alt="" width="400" height="300" loading="lazy">
+            <div class="product-card__body">
+              <p class="product-card__category">Кофемолки</p>
+              <h3 class="product-card__title">Ручная кофемолка «Жернов»</h3>
+              <p class="product-card__description">Стальные конические жернова, 30 ступеней помола.</p>
+              <p class="product-card__price">3 990 ₽</p>
+              <div class="product-card__actions">
+                <a class="button button--small product-card__button" href="product.html">Подробнее</a>
+                <a class="button button--small button--secondary" href="order.html">В заявку</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="grinders">
+            <span class="badge badge--new product-card__badge">Новинка</span>
+            <img class="product-card__image" src="images/grinder.svg" alt="" width="400" height="300" loading="lazy">
+            <div class="product-card__body">
+              <p class="product-card__category">Кофемолки</p>
+              <h3 class="product-card__title">Электрическая кофемолка «Помол-2»</h3>
+              <p class="product-card__description">Жерновая, 40 ступеней, таймер дозировки.</p>
+              <p class="product-card__price">7 490 ₽</p>
+              <div class="product-card__actions">
+                <a class="button button--small product-card__button" href="product.html">Подробнее</a>
+                <a class="button button--small button--secondary" href="order.html">В заявку</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="brewers">
+            <img class="product-card__image" src="images/brewer.svg" alt="" width="400" height="300" loading="lazy">
+            <div class="product-card__body">
+              <p class="product-card__category">Заваривание</p>
+              <h3 class="product-card__title">Воронка V60, керамика</h3>
+              <p class="product-card__description">Классика пуровера на 1–2 чашки, в комплекте 40 фильтров.</p>
+              <p class="product-card__price">1 590 ₽</p>
+              <div class="product-card__actions">
+                <a class="button button--small product-card__button" href="product.html">Подробнее</a>
+                <a class="button button--small button--secondary" href="order.html">В заявку</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-card--sold-out" data-category="brewers">
+            <span class="badge badge--muted product-card__badge">Нет в наличии</span>
+            <img class="product-card__image" src="images/brewer.svg" alt="" width="400" height="300" loading="lazy">
+            <div class="product-card__body">
+              <p class="product-card__category">Заваривание</p>
+              <h3 class="product-card__title">Френч-пресс «Утро», 600 мл</h3>
+              <p class="product-card__description">Боросиликатное стекло и двойной сетчатый фильтр.</p>
+              <p class="product-card__price">1 890 ₽</p>
+              <div class="product-card__actions">
+                <a class="button button--small product-card__button" href="product.html">Подробнее</a>
+                <button class="button button--small" type="button" disabled>Нет в наличии</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="accessories">
+            <span class="badge badge--new product-card__badge">Новинка</span>
+            <img class="product-card__image" src="images/accessory.svg" alt="" width="400" height="300" loading="lazy">
+            <div class="product-card__body">
+              <p class="product-card__category">Аксессуары</p>
+              <h3 class="product-card__title">Весы с таймером «Точность»</h3>
+              <p class="product-card__description">Шаг 0,1 г и встроенный таймер для пуровера.</p>
+              <p class="product-card__price">2 290 ₽</p>
+              <div class="product-card__actions">
+                <a class="button button--small product-card__button" href="product.html">Подробнее</a>
+                <a class="button button--small button--secondary" href="order.html">В заявку</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="accessories">
+            <img class="product-card__image" src="images/accessory.svg" alt="" width="400" height="300" loading="lazy">
+            <div class="product-card__body">
+              <p class="product-card__category">Аксессуары</p>
+              <h3 class="product-card__title">Чайник с гусиным носиком</h3>
+              <p class="product-card__description">0,8 л, тонкий носик для точного пролива.</p>
+              <p class="product-card__price">2 990 ₽</p>
+              <div class="product-card__actions">
+                <a class="button button--small product-card__button" href="product.html">Подробнее</a>
+                <a class="button button--small button--secondary" href="order.html">В заявку</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <div class="site-footer__inner">
+      <div class="site-footer__column">
+        <h2 class="site-footer__title">Зерно и помол</h2>
+        <p class="site-footer__text">Учебный интернет-магазин кофе и оборудования для домашнего заваривания.</p>
+      </div>
+      <nav class="site-footer__column" aria-label="Разделы сайта">
+        <h2 class="site-footer__title">Разделы</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="index.html#advantages">Преимущества</a></li>
+          <li><a class="site-footer__link" href="index.html#popular">Популярные товары</a></li>
+          <li><a class="site-footer__link" href="catalog.html#grinders">Кофемолки</a></li>
+          <li><a class="site-footer__link" href="contacts.html#faq">Вопросы и ответы</a></li>
+        </ul>
+      </nav>
+      <div class="site-footer__column">
+        <h2 class="site-footer__title">Контакты</h2>
+        <address class="site-footer__address">
+          Москва, ул. Учебная, 1<br>
+          <a class="site-footer__link" href="tel:+74950000000">+7 (495) 000-00-00</a><br>
+          <a class="site-footer__link" href="mailto:hello@zerno.example">hello@zerno.example</a>
+        </address>
+      </div>
+    </div>
+    <p class="site-footer__bottom">&copy; 2026 Зерно и помол. Учебный проект по дисциплине «Фронтенд и бэкенд разработка».</p>
+  </footer>
+
+  <a class="to-top" href="#top" aria-label="Наверх">↑</a>
+</body>
+</html>
